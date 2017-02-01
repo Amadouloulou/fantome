@@ -1,64 +1,107 @@
-<!DOCTYPE html />
+<!DOCTYPE html>
 <html>
-<body>
-  <head>
-    <meta charset="utf-8" />
-    <title>Ma belle page</title>
-  </head>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" />
+        
+    </head>
+    
+    <style>
+        * { font-family: 'Open Sans', sans-serif; }
+        body {width: 80%; text-align: center; margin: 0 auto;}
+        h1 { background-color: indigo; color: white; padding: 10px; font-size: 14px; text-align: center; margin-top: 0px; }
+        .flex-loop { 
+            display: flex;
+            background: thistle;
+            min-height: 30em;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .loop {
+            display: flex;
+            background: midnightblue;
+            color: white;
+            
+        }
+        
+        .donut {
+            display: flex;
+            height: 120px;
+            line-height: 420px;
+            width: 120px;
+            border-radius: 50%;
+            border: 5px solid indigo;
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            animation: rotate 1s alternate infinite;
+        }
 
-  <!-- Corps de la page -->
-  <body>
+        @keyframes rotate {
+            from {
+                background: thistle;
+                transform: rotate(0deg);
+            }
+            to {
+                background: indigo;
+                transform: rotate(360deg);
+            }
+        }
 
-C'est ma première page Web !Le navigateur affiche le texte contenu dans le bloc de ma balise"body".
+        /*color: indigo; midnightblue; slateblue; lightcyan; thistle; */
+        .donut2 {
+            display: flex;
+            height: 160px;
+            line-height: 170px;
+            width: 160px;
+            border-radius: 50%;
+            border: 5px solid indigo;
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            animation: coucou 3s alternate infinite;
+        }
 
-<!-- Title -->
-<h1>Titre h1</h1>
-<h2>Titre h2</h2>
-<h3>Titre h3</h3>
-<h4>Titre h4</h4>
-<h5>Titre h5</h5>
-<h6>Titre h6</H6>
-
-
-
-
-<P>  bololo </p>
-<p> Les paragraphes sont délimités par la balise p</p>
-
-<!-- paragraphe pré-formatés-->
-<p>Voici un paragraphe pré-formaté</p>
-<pre> pagraphe </pre>
-
-<p>Voici la structure de base d'une page html :
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-
-
-</body>
+        @keyframes coucou {
+            from {
+                background: indigo;
+                transform: rotate(360deg);
+            }
+            to {
+                background: thistle;
+                transform: rotate(0deg);
+            }                
+        }
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+    <body>
+        <h1>Exercice 3 : Boucle</h1>
+        <h3>Exercice 3.5 : Afficher : "Je m'affiche pour la Nème fois"</h3>
+        
+        <div class="flex-loop">
+            <div class="donut">*</div>
+            <div class="donut2">#</div>
+            
+            <div class="loop">
+                <p>Test</p>
+            </div>
+        </div>
+               
+        <?php
+            
+        for($nb = 1 ; $nb <= 100 ; $nb++) {
+                
+                echo '<h1>Je m\'affiche pour la ' . $nb . 'ème fois</h1>';
+            
+            }
+        
+        ?>
+        
+        
+    </body>
+    
 </html>
-</p>
-
-<!-- Pour faire des commentaires et expliquer son code -->
-<p>un paragraphe est bloc de texte.</p>
-<p>Un paragraphe ne comprend pas les retours à la ligne.<br /> Mais avec ma balise <br /> je gère mes retours à la ligne !</p>
-
-<!-- La disposition -->
-<p style="text-align:right"> Ce paragraphe sur deux <br /> lignes est disposé <br /> à droite. </p>
-<p style="text-align:center"> Ce paragraphe sur deux <br /> lignes est disposé <br /> à droite. </p>
-<p style="text-align:left"> Ce paragraphe sur deux <br /> lignes est disposé <br /> à droite. </p>
-
-<p>Quel est le rôle de la balise HR ?</p>
-<hr />
-<P> Elle insère une ligne séparatrice dans le contenu de la page html.<br />Elle est auto-fermante (ou orpheline)... à ne pas confondre avec la balise BR qui elle permet d'effectuer <br /> un retour à la ligne !</p
-
-<!-- la mise en valeur -->
-  <!-- STRONG -->
-<p>Bonjour, ceci est mon premier test en HTML alors <strong>soyez indulgents</strong> s'il vous plait !</p>
-  <!-- EM "petite mise en valeur"-->
-<p>Bonjour, ceci est mon premier test en HTML alors <em>soyez indulgent</em> s'il vous plait !</p>
-<!--MARK fait ressortir visuellement une portion du texte-->
-<p>Bonjour, ceci est mon premier test en HTML alors <mark>soyez indulgent</mark> s'il vous plait !</p>
